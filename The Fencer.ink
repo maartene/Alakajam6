@@ -13,9 +13,9 @@ VAR overheard_uncle_leo = 0
 === Prologue ===
 
 You come running towards the noise. When you arrive you immediately see the pool of blood. In the pool lies one of the fencers. It doesn't move.
-The other fencer is sitting on a chair. She took of here helmet. You can see it's your friend Jessica. She's silent. She's staring at the body - of who you can only assume is her brother Daniel.
+The other fencer is sitting on a chair. She took of her helmet. You can see it's your friend Jessica. She's silent. She's staring at the body - of whom you can only assume is her brother Daniel.
 
-* [What happened?] "What happened?" you ask one of the audience members.
+* "What happened?" [] you ask one of the audience members.
     "She-she stabbed him! And then there was blood everywhere. And then he fell down. She killed him!"
 
 - Oh my! Now what? -> investigation
@@ -36,9 +36,9 @@ VAR prologue_investigation_time = 0
     ~saw_foil = 1 
     This is no sports foil: the blade and tip are sharp. It has blood on it. There is no doubt that this is the murder weapon. -> investigation
 * [Talk to the fencer (the one that is still breathing)]
-    * * What happened?
-    * * Why, Jessica, why?
-    * * {saw_foil > 0} How did you get your hands on that foil?
+    * * "What happened?"
+    * * "Why, Jessica, why?"[], you're pleading.
+    * * {saw_foil > 0} "How did you get your hands on that foil?" you ask. 
     - - "I, I killed him!" is all Jessica can say. She keeps repeating it over and over again. Then she stops and remains silent. She's clearly in shock.
     -> investigation
 
@@ -49,35 +49,35 @@ VAR prologue_investigation_time = 0
 
 === act1_questioning ===
 ACT 1: Questioning # CLASS: chapter
-You find yourself in a large next to the fencing room. There is coffee and tea, as well as something stronger for those who need it. A good time to ask around a bit. 
+You find yourself in a large hall next to the fencing room. There is coffee and tea, as well as something stronger for those who need it. A good time to ask around a bit. 
 -> interview
 
 = interview
 Who do you want to talk to?
 * [The judge]
     The <b>judge</b> is still in his formal dress. His right hand clutches a drink. 
-    * * { saw_foil >  0} How come nobody noticed that this was not a sports foil?
+    * * { saw_foil >  0} "How come nobody noticed that this was not a sports foil?" [] you wonder.
         "The only ones close enough are the fencers, but their vision is impaired through their helmets. As judges we look more at the body and posture than the blades. For instance to determine right of way."
-    * * { saw_foil == 0 } How can you kill somebody with a competitive fencing foil?
+    * * { saw_foil == 0 } "How can you kill somebody with a competitive fencing foil?" [] you wonder.
         "You can't. Not with all the armour we wear. That however, was not a standard foil."
-    * * Did you find anything suspicious?
+    * * "Did you find anything suspicious?" [] you ask. 
         "I did notice that the <b>other foil</b> had sharp edges and a shart tip as well. It was similar to the murder weapon, sans the blood of course."
         ~ saw_other_foil = 1
     - - The judge retires to his drink. It's obvious your converstation is over.
     -> interview
-* An audience member
-    You approach a <b>woman</b>, probably in her thirties. 
-    * * What do you think happened?
+* [An audience member]
+    You approach one of the spectators, a <b>woman</b>, probably in her thirties. 
+    * * "What do you think happened?" [] you ask. 
         "I saw it clear as day. The woman fencer Jessica lunged forward and stabbed the other fencer right in the chest."
-    * * Daniel and Jessica
+    * * [Daniel and Jessica] "Did you know the fencers?" you ask.
         "I don't know them well, but I do know they were siblings. What a terrible act to murder your own brother! And in front of all those people!"
     - - The woman bids you a good day and returns to speaking with some of the other guests.
     -> interview
 * [Another audience member]
     You approach a <b>young man</b>, probably in his twenties.
-    * * Fencing 
+    * * [Fencing] "Can you tell me something about fencing?", you ask.
         "Fencing is a great sport: it requires strength, finesse, intelligence and great reflexes."
-    * * About him
+    * * [About him] "What about you?", you ask.
         "I'm a fencer too you know. I was here to watch the match and study their movements. Daniel and Jessica are quite good, at the top of the amateur ranks. Would not have imagined seeing a more <i>historical</i> interpretation of fencing tonight..."
     - - You thank the young man and look around who can give you more information.
     -> interview
@@ -86,20 +86,20 @@ Who do you want to talk to?
     * * [Offer condoleances for their loss]
         You offer your simpathies for their loss. "Thank you so much. And to you too. You knew Jessica well did you?"
         Indeed, you did, once...
-    * * What happened?
+    * * "What happened?" [] you ask.
         "I just don't understand it", your aunt stammers. Uncle Leo can only mutter "What a tragedy."
-    * * [Uncle Leo and Aunt Jess]
+    * * [Uncle Leo and Aunt Jess] "So, how exactly are you related to Daniel and Jessica?" you ask.
         "We are related to Jessica and Daniel on their fathers side." uncle Leo explains. Aunt Jess adds: "Yes, their father, the good Earl was my brother."
-    * * Daniel and Jessica
+    * * [Daniel and Jessica] "What do you think about your niece and nephew?" you ask. 
         "They always seemed to close and friendly. Yet, somehow we knew something was wrong..." 
     - - You hug your aunt and uncle and let them retire. 
         -> interview
 * [A police officer]
     You approach the <b>police officer</b>. He looks very sincere. 
-    * * How can anyone be so brazen to kill in plain sight?
+    * * "How can anyone be so brazen to kill in plain sight?" [] you ask.
         "You might think all killers are smart, cunning and planning. They are only like that in murder mysteries. In reality, most murders are not premeditated and most killers are not particularly smart. In reality, the obvious explanation is usually right."
         "Well, at least 8 out of 10.", the officer adds.
-    * * Are you going to arrest Jessica?
+    * * "Are you going to arrest Jessica?" [] you ask.
         "Not up to me, talk to the Police Detective. He's in the room next door with the suspect."
         * * * [Go to other room]
             "I'm ordered to keep everyone here. You can't go there right now."
@@ -107,14 +107,14 @@ Who do you want to talk to?
         -> interview
 * [The butler]
     "Sir", the <b>butler</b> greets you. 
-    * * Scotch, please!
+    * * "Scotch, please!"
         "Please help yourself to a beverage at the bar."
-    * * What happened?
+    * * "What happened?" you ask.
         "What always happens when there is money at stake! And in these circles, there is always money at stake I tell you."
-    * * You did it!
+    * * "You did it!" [] you beam at the buttler.
     - - The butler just smiles, politely and incincere. Then walks away.
     -> interview
-+ [End questioning]
++ [End questioning] "I'm done questioning", you think to yourself.
     The police detective walks in and beacons the police officer to come with him to the other rooms. Perhaps now's a good time to have a look around?
     -> continue
 
@@ -130,7 +130,6 @@ With the copper out of the way, it's a good time to have a look around. Who know
 -> looking_around
 
 = looking_around
-{ overheard_uncle_leo > 0 && found_will > 0: -> finished_looking_around }
 Where do you want to go?
 * [Kitchen]
     The kitchen is empty.
@@ -151,7 +150,7 @@ Where do you want to go?
         ~ found_will = 1
         You look to make sure nobody can see you. Then you quickly open the desk drawer. You find an <b>open envelop</b> addressed to Jessica and Daniel.
         * * * [Read letter]
-            You start reading the <b>letter</b>. The letter is a <b>will</b>! Aparently Jessica and Daniel's father was an Earl. The will describes the estate (including a one of a kind original <b>painting by Monet</b>), as well as the way the estate is to be devided and the conditions for their inheritence.
+            You start reading the <b>letter</b>. The letter is a <b>will</b>! Apparently Jessica and Daniel's father was an Earl. The will describes the estate (including a one of a kind original <b>painting by Monet</b>), as well as the way the estate is to be devided and the conditions for their inheritence.
                 "Wow," you think, "my ex was a Dutchess! Who would have known."
                 You quickly put the will back in the envelop, close the drawer and quetly leave the room. 
             -> looking_around
@@ -165,7 +164,6 @@ Where do you want to go?
     -> finished_looking_around
     
 = looking_around_second_floor
-{ overheard_uncle_leo > 0 && found_will > 0: -> finished_looking_around }
 You find yourself in the <b>second floor hallway</b>. 
 * [Master bedroom]
     It's a typical <b>Master Bedroom</b> for the more affluent of types. The one thing that really stands out is a small <b>paiting</b> on the East wall. It's signed "Monet" or so it seems. Could it really be?
@@ -174,10 +172,10 @@ You find yourself in the <b>second floor hallway</b>.
 * [Guest room]
     ~ overheard_uncle_leo = 1
     When you try and enter the <b>guest room</b>, you stop before the door when you hear a voice inside. Instead of knocking, you decide to listen in on the conversation. 
-        "Yes, it is going according to plan..."
-        "No, no, everybody looks at the sister..."
-        "We'll just stay here and wait for this to unfold..."
-        "Talk to you later! Next time we speak it will be 'earl' to you. Bye bye!"
+        <i>"Yes, it is going according to plan..."</i>
+        <i>"No, no, everybody looks at the sister..."</i>
+        <i>"We'll just stay here and wait for this to unfold..."</i>
+        <i>"Talk to you later! Next time we speak it will be 'earl' to you. Bye bye!"</i>
         The call ends. You hear footsteps coming to the door. You quickly move out of the way.
         From around the hall, you see your <b>uncle Leo</b> leave the guest room.
     -> looking_around_second_floor
@@ -241,7 +239,11 @@ You begin: "Off course" -> your_moment
 
 = implicated_uncle_leo
 The police detecive stands up and starts a slow applause. 
-Then sarcastically he beams "We already came to the same conclusion. { found_will == 0: And we actually know WHY he did it - a big inheritence. } But thank you for the entertainment. And keeping the uncle here, while we were securing the evidence. You have our sincerest gratitude. Here take this... "
+Then sarcastically he beams "We already came to the same conclusion. { found_will == 0: And we actually know WHY he did it - a big inheritence. } But thank you for the entertainment. And keeping the uncle here, while we were securing the { found_will > 0: 
+        <> will 
+        - else: <> evidence
+    } 
+        <>. You have our sincerest gratitude. Here take this... "
 <i>(received coupon: "Free entry to a Murder Mystery weekend")</i>
 -> nearly_done
 
