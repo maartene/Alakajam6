@@ -119,9 +119,9 @@ Who do you want to talk to?
     -> continue
 
 = continue
-* [Continue to next part]
++ [Continue to next part]
     -> act2_have_a_look_around
-* [No, I want to question some more]
++ [No, I want to question some more]
     -> interview
 
 === act2_have_a_look_around
@@ -191,9 +191,9 @@ You find yourself in the <b>second floor hallway</b>.
 { overheard_uncle_leo > 0 && found_will == 0: You have an idea what happened, but you are not completely sure. }
 { overheard_uncle_leo == 0 && found_will > 0: You have an idea what happened, but you are not completely sure. }
 { overheard_uncle_leo == 0 && found_will == 0: It might be wise to look for some more clues, but hey, it's up to you! }
-* { overheard_uncle_leo == 0 || found_will == 0 } [Investigate further]
++ { overheard_uncle_leo == 0 || found_will == 0 } [Investigate further]
     -> looking_around
-* [Continue to next part]
++ [Continue to next part]
     -> act3_the_reveal
 
 === act3_the_reveal ===
